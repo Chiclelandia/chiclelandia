@@ -1,4 +1,5 @@
 <template>
+  <h1 class="text-gray-700">Hola mundo</h1>
 </template>
 
 <script lang="ts">
