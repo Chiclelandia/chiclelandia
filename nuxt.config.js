@@ -4,9 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'chiclelandia-frontend',
+    title: 'Chiclelandia',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },
