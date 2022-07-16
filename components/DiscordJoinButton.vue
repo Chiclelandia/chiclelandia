@@ -5,17 +5,19 @@
         width="48" alt="">
       <div class="flex flex-col ml-4">
         <span class="text-gray-100 font-bold">{{ discordServer.guild.name }}</span>
-        <span class="text-gray-400 flex flex-row space-x-4">
+        <span class="text-gray-300 flex flex-row space-x-4">
           <span>
+            <span class="inline-flex bg-green-400 w-2 h-2 rounded-full mb-0.5"></span>
             {{ discordServer.approximate_presence_count }} Conectados
           </span>
           <span>
+            <span class="inline-flex bg-gray-400 w-2 h-2 rounded-full mb-0.5"></span>
             {{ discordServer.approximate_member_count }} Miembros
           </span>
         </span>
       </div>
       <a :href="`https://discordapp.com/invite/${discordServer.code}`" target="_blank"
-        class="ml-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">Entrar</a>
+        class="transition-colors duration-500 ml-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Entrar</a>
     </div>
   </div>
 </template>
@@ -35,28 +37,4 @@ export default {
 </script>
 
 <style>
-.onlineInd{
-    color:#72767d;
-    column-rule-color:#72767d;
-    background:#43b581;
-    font:italic normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
-}
-.numOnline{
-    color:#72767d;
-    display:block;
-    height:16px;
-    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin:0 8px 0 0
-}
-.offlineInd{
-    color:#72767d;
-    background:#747f8d;
-    font:italic normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
-}
-.numTotal{
-    color:#72767d;
-    display:block;
-    height:16px;
-    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
-}
 </style>
