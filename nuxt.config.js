@@ -11,7 +11,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Comunidad de videojuegos en español. Entra para jugar en nuestros servidores o conocer a otras personas que aman los juegos tanto como tú.' },
+      { name: 'robots', content: 'index, follow'},
+      { name: 'og:title', content: 'Chiclelandia'},
+      { name: 'og:url', content: 'https://chiclelandia.com/'},
+      { name: 'og:description', content: 'Comunidad de videojuegos en español. Entra para jugar en nuestros servidores o conocer a otras personas que aman los juegos tanto como tú.'},
+      { name: 'og:image', content: '~/assets/images/logo.png'},
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
