@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  modules: ['@vite-pwa/nuxt'],
   app: {
     head: {
       title: 'Chiclelandia',
@@ -23,6 +24,46 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Chiclelandia',
+      short_name: 'Chiclelandia',
+      description: 'Comunidad de videojuegos en español. Entra para jugar en nuestros servidores o conocer a otras personas que aman los juegos tanto como tú.',
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+      icons: [
+        {
+          src: '/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: '/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,jpg,svg}'],
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/cdn.discordapp.com\/.*/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'discord-images',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 7 * 24 * 60 * 60, // 1 week
+            },
+          },
+        },
+      ],
+    },
   },
 
   components: [
