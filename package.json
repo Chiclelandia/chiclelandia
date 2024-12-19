@@ -1,28 +1,23 @@
 {
-  "name": "chiclelandia-frontend",
-  "version": "1.0.0",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "core-js": "^3.19.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.6.14",
-    "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0"
+    "nuxt": "^3.14.1592",
+    "sass": "^1.83.0",
+    "vue": "latest",
+    "vue-router": "latest"
   },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/tailwindcss": "^4.2.1",
-    "postcss": "^8.4.4",
-    "sass": "^1.53.0",
-    "sass-loader": "10"
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.17"
   }
 }
